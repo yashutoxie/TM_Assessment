@@ -3,7 +3,7 @@
 ## Zerodha Landing Page
 ![Zerodha Landing Page](https://github.com/yashutoxie/TM_Assessment/blob/main/1.%20Zerodha%20Landing%20Page/zerodha_LandPage_Output.png)
 
-## Spotify Clone
+## Spotify Clone [Outline]
 ![Spotify Clone](https://github.com/yashutoxie/TM_Assessment/blob/main/2.%20Spotify%20Clone/image.png)
 
 ## Calculator Using DOM Manipulations
