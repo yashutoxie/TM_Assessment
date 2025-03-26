@@ -1,0 +1,23 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false">
+    
+    <!-- Default cache settings -->
+    <defaultCache
+        maxEntriesLocalHeap="1000"
+        eternal="false"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="1200"
+        memoryStoreEvictionPolicy="LRU"/>
+ 
+    <!-- Hibernate second-level cache configuration -->
+    <cache name="libraryCache"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"/>
+ 
+</ehcache>
+ 
+ 
