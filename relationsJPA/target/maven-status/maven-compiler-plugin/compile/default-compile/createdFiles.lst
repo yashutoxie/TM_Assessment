@@ -1,0 +1,5 @@
+com\jpa\relationsJPA\App.class
+com\jpa\relationsJPA\JPAUtil.class
+com\jpa\relationsJPA\User.class
+com\jpa\relationsJPA\Author.class
+com\jpa\relationsJPA\Book.class
