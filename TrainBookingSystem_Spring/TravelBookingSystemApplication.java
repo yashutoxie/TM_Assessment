@@ -1,7 +1,6 @@
 package com.spring.TravelBookingSystem;
 
 import java.util.Scanner;
-
 import org.springframework.beans.BeansException;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
