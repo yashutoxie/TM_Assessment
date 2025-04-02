@@ -1,5 +1,4 @@
 package com.spring.TravelBookingSystem;
-
 import org.springframework.stereotype.Component;
 
 @Component("flightservice")
