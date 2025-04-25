@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-Solving with Predefined Functions</title>
+</head>
+
+<body>
+    <h1> Open the Console (ctrl + shift + i)</h1>
+    <script>
+
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateOTP(length = 6) {
+            let otp = '';
+            for (let i = 0; i < length; i++) {
+                otp += Math.floor(Math.random() * 10);
+            }
+            return otp;
+        }
+
+        function printStarPattern(rows) {
+            let pattern = '';
+            for (let i = rows; i > 0; i--) {
+                let row = '';
+                for (let j = 0; j < i; j++) {
+                    row += '*';
+                }
+                pattern += row + '\n';
+            }
+            return pattern;
+        }
+
+        function calculateSum(n) {
+            return (n * (n + 1)) / 2;
+        }
+
+        function main() {
+            const randomNum = generateRandomNumber(1, 100);
+            console.log(`Random Number Generation: ${randomNum}`);
+
+            const generatedOTP = generateOTP();
+            console.log(`Generated OTP: ${generatedOTP}`);
+
+            const starPattern = printStarPattern(5);
+            console.log(`Star Pattern:\n${starPattern}`);
+
+            const sumResult = calculateSum(5);
+            console.log(`Sum of numbers from 1 to 5: ${sumResult}`);
+
+        }
+
+
+        main();
+    </script>
+</body>
+
+</html>
