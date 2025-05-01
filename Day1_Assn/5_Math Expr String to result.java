@@ -81,3 +81,60 @@ public class Main {
         return 0;
     }
 }
+
+
+/*Approach 2:Without Collections*/
+
+import java.util.*;
+public class Main
+{
+	private  static int idx;
+	public static int evaluate(String expr) {
+		idx = 0;
+		return parseExpression(expr.toCharArray());
+	}
+
+	private static int parseExpression(char[] chars) {
+		int n = 0, res = 0, sign = 1, lastVal = 0;
+		char lastOp = '+';
+		while(idx < chars.length) {
+			char ch = chars[idx++];
+			if(Character.isDigit(ch)) {
+				n = n * 10 + ((ch - '0'));
+			}
+			if(ch == '(') {
+				n = parseExpression(chars);
+			}
+			if((!Character.isDigit(ch) && ch != ' ' && ch != '(') || idx == chars.length ||ch == ')')
+			{
+				switch(lastOp) {
+				case '+':
+					res += lastVal;
+					lastVal = n;
+					break;
+				case '-':
+					res += lastVal;
+					lastVal = -n;
+					break;
+				case '*':
+					lastVal *= n;
+					break;
+				case '/':
+					lastVal /= n;
+					break;
+				}
+				if(ch == ')') break;
+				lastOp = ch;
+				n = 0;
+			}
+		}
+		return res + lastVal;
+	}
+
+	public static void main(String[] args) {
+		String expr1 = "10 + 2 * 6";
+		String expr2 = "100 * ( 2 + 12) / 14";
+		System.out.println(evaluate(expr1));
+		System.out.println(evaluate(expr2));
+	}
+}
